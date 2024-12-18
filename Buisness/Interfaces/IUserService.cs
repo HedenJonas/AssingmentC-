@@ -4,6 +4,6 @@ namespace Business.Interfaces;
 
 public interface IUserService
 {
-    void AddUser(Users users);
-    IEnumerable<Users> ShowUsers(out bool hasError);
+    void AddUser(User users);
+    IEnumerable<User> ShowUsers(out bool hasError);
 }

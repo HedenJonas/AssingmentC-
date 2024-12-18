@@ -5,9 +5,18 @@ using Business.Services;
 
 namespace MainApp.MenuDialog;
 
-public class MenuDialog : IMenuDialog
+public class MenuDialog
 {
-    public readonly UserService _UserService = new();
+    // Detta är första koden som kan köra appen!!
+    //public readonly UserService _UserService = new();
+
+    // ai lösningen:
+    public readonly UserService _UserService;
+    public MenuDialog(UserService userService)
+    {
+        _UserService = userService;
+    }
+
     public void ShowMenu()
     {
         bool IsRunning = true;
@@ -58,7 +67,7 @@ public class MenuDialog : IMenuDialog
 
     public void ShowAddUsers()
     {
-        var NewUser = UsersFactories.Create();
+        var NewUser = UserFactory.Create();
         Console.Clear();
         Console.Write("Enter first name: ");
         NewUser.FirstName = Console.ReadLine()!;

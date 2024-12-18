@@ -3,10 +3,10 @@ using Business.Models;
 
 namespace Business.Factories;
 
-public class UsersFactories
+public class UserFactory
 {
-    public static Users Create()
+    public static User Create()
     {
-        return new Users();
+        return new User();
     }
 }
