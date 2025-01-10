@@ -7,11 +7,6 @@ namespace Business.Services;
 
 public class UserService : IUserService
 {
-    // Detta är första koden som kan köra appen!!
-    //private readonly FileService _fileService = new();
-    //private List<User> _Users = [];
-
-    // ai lösningen:
     private readonly IFileService _fileService;
     private List<User> _Users = [];
 
